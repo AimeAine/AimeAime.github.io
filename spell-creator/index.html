@@ -2,6 +2,45 @@
   <body>
     <div id="container"></div>
     <div>
+      <div class="setting-input">
+        <input type="checkbox" onclick="toggleSnapOnCircle()" checked/><label>snap on circle</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedBodySnapping" onclick="toggleSnapOnBody('top')" checked/><label>snap on object top</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedBodySnapping" onclick="toggleSnapOnBody('center')" checked/><label>snap on object center</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedBodySnapping" onclick="toggleSnapOnBody('bottom')" checked/><label>snap on object bottom</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" onclick="toggleSnapOnSigils('all')" checked/><label>snap on sigils</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedSigilSnapping" onclick="toggleSnapOnSigils('top')" checked/><label>snap on sigils's tops</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedSigilSnapping" onclick="toggleSnapOnSigils('center')" checked/><label>snap on sigils's centers</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedSigilSnapping" onclick="toggleSnapOnSigils('bottom')" checked/><label>snap on sigil's bottom</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" onclick="toggleSnapOnSigns('all')" checked/><label>snap on signs</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedSignSnapping" onclick="toggleSnapOnSigns('top')" checked/><label>snap on signs's tops</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedSignSnapping" onclick="toggleSnapOnSigns('center')" checked/><label>snap on signs's centers</label>
+      </div>
+      <div class="setting-input">
+        <input type="checkbox" class="detailedSignSnapping" onclick="toggleSnapOnSigns('bottom')" checked/><label>snap on sign's bottom</label>
+      </div>
+      <p>This site was created thanks to KonvaJS and <a href="https://witchhatatelier.telepedia.net/wiki/Witch_Hat_Atelier_Wiki" target="_blank">Independent Witch Hat Atelier Wiki</a></p>
+    </div>
+    <div>
       <ul class="menu__tabs">
         <li class="menu_tab"><a class="active" onclick="openTab(event, 'sigils')">Sigils</a></li>
         <li class="menu_tab"><a onclick="openTab(event, 'signs')">Signs</a></li>
@@ -22,7 +61,29 @@
       </div>
       <div id="signs" class="tab" style="display:none">
         <div class="img-container">
+          <img src="./assets/signs/aeriformsdefined.png" onclick="addSignToScene('aeriformsdefined')" />
+          <img src="./assets/signs/billowing.png" onclick="addSignToScene('billowing')" />
+          <img src="./assets/signs/birda.png" onclick="addSignToScene('birda')" />
+          <img src="./assets/signs/birdb.png" onclick="addSignToScene('birdb')" />
           <img src="./assets/signs/column.png" onclick="addSignToScene('column')" />
+          <img src="./assets/signs/convergence.png" onclick="addSignToScene('convergence')" />
+          <img src="./assets/signs/collection.png" onclick="addSignToScene('collection')" />
+          <img src="./assets/signs/crush.png" onclick="addSignToScene('crush')" />
+          <img src="./assets/signs/curtainleech.png" onclick="addSignToScene('curtainleech')" />
+          <img src="./assets/signs/direction.png" onclick="addSignToScene('direction')" />
+          <img src="./assets/signs/dispersion.png" onclick="addSignToScene('dispersion')" />
+          <img src="./assets/signs/entwine.png" onclick="addSignToScene('entwine')" />
+          <img src="./assets/signs/float.png" onclick="addSignToScene('float')" />
+          <img src="./assets/signs/gather.png" onclick="addSignToScene('gather')" />
+          <img src="./assets/signs/glaives.png" onclick="addSignToScene('glaives')" />
+          <img src="./assets/signs/levitation.png" onclick="addSignToScene('levitation')" />
+          <img src="./assets/signs/pull.png" onclick="addSignToScene('pull')" />
+          <img src="./assets/signs/repetition.png" onclick="addSignToScene('repetition')" />
+          <img src="./assets/signs/scalewolf.png" onclick="addSignToScene('scalewolf')" />
+          <img src="./assets/signs/sights_Set.png" onclick="addSignToScene('sights_Set')" />
+          <img src="./assets/signs/signofwind.png" onclick="addSignToScene('signofwind')" />
+          <img src="./assets/signs/strengthen.png" onclick="addSignToScene('strengthen')" />
+          <img src="./assets/signs/weave.png" onclick="addSignToScene('weave')" />
         </div>
       </div>
     </div>
@@ -44,6 +105,11 @@
       color: #31a687;
       font-weight: bold;
       text-decoration: none;
+    }
+
+    .setting-input {
+      display: flex;
+      align-items: center;
     }
 
 .menu__tabs {
